@@ -57,7 +57,7 @@ class _SplashscreenState extends State<Splashscreen> {
               Text(
                 'ing-VPN',
                 style: GoogleFonts.museoModerno(
-                  color: Colors.white,
+                  color: Colors.yellow,
                   fontSize: 27,
                   fontWeight: FontWeight.w600,
                 ),
