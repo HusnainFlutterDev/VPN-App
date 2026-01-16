@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vpn/languagescareen/languagescreen.dart';
@@ -55,12 +57,14 @@ class _GetstartedState extends State<Getstarted> {
               ),
             ],
           ),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+
                   children: [
                     GestureDetector(
                       onTap: () {
@@ -68,97 +72,103 @@ class _GetstartedState extends State<Getstarted> {
                           isselected = !isselected;
                         });
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white),
-                          borderRadius: BorderRadius.circular(5),
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 5),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+
+                          width: 25.27,
+                          height: 25.27,
+                          child: isselected
+                              ? Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.blueAccent,
+
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  child: Icon(
+                                    Icons.check,
+                                    color: Colors.white,
+                                    size: 18,
+                                  ),
+
+                                  width: 25.27,
+                                  height: 25.27,
+                                )
+                              : null,
                         ),
-
-                        width: 25.27,
-                        height: 25.27,
-                        child: isselected
-                            ? Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.blueAccent,
-
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                                child: Icon(
-                                  Icons.check,
-                                  color: Colors.white,
-                                  size: 18,
-                                ),
-
-                                width: 25.27,
-                                height: 25.27,
-                              )
-                            : null,
                       ),
                     ),
                     SizedBox(width: 7),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'By clicking ‘Get Started’ you are agree to',
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w200,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'By clicking ‘Get Started’ you are agree to',
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w300,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Privacy Policy & Terms and Conditions',
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.white,
+                          Text(
+                            'Privacy Policy & Terms and Conditions',
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.white,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
-              ),
 
-              SizedBox(height: 16),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 31),
-                child: GestureDetector(
-                  onTap: () {
-                    if (isselected) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => Languagescreen()),
-                      );
-                    }
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(38.06),
-                      color: isselected
-                          ? Colors.blueAccent
-                          : const Color.fromARGB(255, 45, 69, 110),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Get Started',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
+                SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 31),
+                  child: GestureDetector(
+                    onTap: () {
+                      if (isselected) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => Languagescreen()),
+                        );
+                      }
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(38.06),
+                        color: isselected
+                            ? Colors.blueAccent
+                            : const Color.fromARGB(255, 45, 69, 110),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Get Started',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
+                      width: double.infinity,
+                      height: 52,
                     ),
-                    width: double.infinity,
-                    height: 52,
                   ),
                 ),
-              ),
-              SizedBox(height: 50),
-            ],
+                SizedBox(height: 50),
+              ],
+            ),
           ),
         ],
       ),

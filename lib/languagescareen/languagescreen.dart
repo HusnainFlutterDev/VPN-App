@@ -19,15 +19,13 @@ class _LanguagescreenState extends State<Languagescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff10172A),
       body: Stack(
         children: [
           Container(
             width: double.infinity,
             height: double.infinity,
-            child: Image.asset(
-              'assets/images/background1.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/map.png', fit: BoxFit.cover),
           ),
           Column(
             children: [

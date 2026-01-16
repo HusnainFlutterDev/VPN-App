@@ -57,21 +57,13 @@ class _SplashscreenState extends State<Splashscreen> {
               Text(
                 'ing-VPN',
                 style: GoogleFonts.museoModerno(
-                  color: Colors.yellow,
+                  color: Colors.white,
                   fontSize: 27,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ],
           ),
-          // Container(
-          //   decoration: BoxDecoration(
-          //     color: const Color.fromARGB(255, 51, 75, 117),
-          //     borderRadius: BorderRadius.circular(38.06),
-          //   ),
-          //   width: 101,
-          //   height: 6,
-          // ),
         ],
       ),
     );

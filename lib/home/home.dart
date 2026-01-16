@@ -41,15 +41,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff10172A),
       body: Stack(
         children: [
           Container(
             width: double.infinity,
             height: double.infinity,
-            child: Image.asset(
-              'assets/images/background1.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/map.png', fit: BoxFit.cover),
           ),
 
           Column(
@@ -78,7 +76,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Text(
-                'welcome',
+                'Welcome',
                 style: GoogleFonts.montserrat(
                   color: Color(0xFF7C7F90),
                   fontSize: 15,
