@@ -38,7 +38,7 @@ class _LanguagescreenState extends State<Languagescreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Select Language',
+                      'select Language',
                       style: GoogleFonts.montserrat(
                         color: Colors.white,
                         fontSize: 18,

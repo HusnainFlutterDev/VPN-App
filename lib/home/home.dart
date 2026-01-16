@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Text(
-                'Welcome',
+                'welcome',
                 style: GoogleFonts.montserrat(
                   color: Color(0xFF7C7F90),
                   fontSize: 15,
