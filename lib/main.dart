@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:vpn/SplashScreen/SplashScreen.dart';
 import 'package:vpn/getstared/getstarted.dart';
+
 import 'package:vpn/languagescareen/languagescreen.dart';
+
+import 'package:vpn/premium/premium.dart';
 
 void main() {
   runApp(const MyApp());
