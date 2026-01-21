@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vpn/getstared/getstarted.dart';
@@ -19,15 +17,13 @@ class _LanguagescreenState extends State<Languagescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff10172A),
       body: Stack(
         children: [
           Container(
             width: double.infinity,
             height: double.infinity,
-            child: Image.asset(
-              'assets/images/background1.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/map.png', fit: BoxFit.cover),
           ),
           Column(
             children: [
@@ -85,7 +81,7 @@ class _LanguagescreenState extends State<Languagescreen> {
                 onTap: () => setState(() => slectedindex = 0),
 
                 child: languageWidget(
-                  image: 'assets/images/flag2.webp',
+                  image: 'assets/images/flag pakistan.png',
                   text1: 'Urdu',
                   isselected: slectedindex == 0,
                 ),

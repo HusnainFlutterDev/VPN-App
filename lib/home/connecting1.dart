@@ -12,13 +12,14 @@ class _Connecting1State extends State<Connecting1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff10172A),
       body: Stack(
         children: [
           Container(
             width: double.infinity,
             height: double.infinity,
             child: Image.asset(
-              'assets/images/background1.jpg',
+              'assets/images/wolrdmap(3).png',
               fit: BoxFit.cover,
             ),
           ),

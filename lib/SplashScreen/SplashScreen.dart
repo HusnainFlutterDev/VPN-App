@@ -64,14 +64,6 @@ class _SplashscreenState extends State<Splashscreen> {
               ),
             ],
           ),
-          // Container(
-          //   decoration: BoxDecoration(
-          //     color: const Color.fromARGB(255, 51, 75, 117),
-          //     borderRadius: BorderRadius.circular(38.06),
-          //   ),
-          //   width: 101,
-          //   height: 6,
-          // ),
         ],
       ),
     );

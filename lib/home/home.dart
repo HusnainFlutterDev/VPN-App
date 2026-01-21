@@ -2,6 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vpn/connectingreport/connectingreport.dart';
+import 'package:vpn/premium/premium.dart';
+import 'package:vpn/search%20location/location.dart';
+import 'package:vpn/setting/setting.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -41,15 +45,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff10172A),
       body: Stack(
         children: [
           Container(
             width: double.infinity,
             height: double.infinity,
-            child: Image.asset(
-              'assets/images/background1.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/map.png', fit: BoxFit.cover),
           ),
 
           Column(
@@ -60,20 +62,39 @@ class _HomeState extends State<Home> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 36,
-                      height: 36,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 55, 55, 55),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.white,
-                        weight: 10,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => (Setting())),
+                        );
+                      },
+                      child: Container(
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 55, 55, 55),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Icon(
+                          Icons.settings,
+                          color: Colors.white,
+                          weight: 10,
+                        ),
                       ),
                     ),
-                    Image.asset('assets/images/crown.png', height: 56),
+                    GestureDetector(
+                      onTap: () {
+                        {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => Premium()),
+                          );
+                        }
+                      },
+
+                      child: Image.asset('assets/images/crown.png', height: 56),
+                    ),
                   ],
                 ),
               ),
@@ -107,47 +128,57 @@ class _HomeState extends State<Home> {
                 ],
               ),
               SizedBox(height: 20),
-              Container(
-                width: 325,
-                height: 70,
-                decoration: BoxDecoration(
-                  color: Color(0xFF1D2031),
-                  borderRadius: BorderRadius.circular(114),
-                  border: Border.all(
-                    color: isselected ? Colors.greenAccent : Colors.blueAccent,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => Connectingreport()),
+                  );
+                },
+                child: Container(
+                  width: 325,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF1D2031),
+                    borderRadius: BorderRadius.circular(114),
+                    border: Border.all(
+                      color: isselected
+                          ? Colors.greenAccent
+                          : Colors.blueAccent,
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Row(
-                    children: [
-                      Image.asset('assets/images/england.png'),
-                      SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'United States',
-                            style: GoogleFonts.montserrat(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/images/england.png'),
+                        SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'United States',
+                              style: GoogleFonts.montserrat(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'IP - 127.123.21.12',
-                            style: GoogleFonts.montserrat(
-                              color: Color(0xFF7C7F90),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
+                            Text(
+                              'IP - 127.123.21.12',
+                              style: GoogleFonts.montserrat(
+                                color: Color(0xFF7C7F90),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: 93),
-                      Icon(Icons.arrow_forward_ios, color: Colors.white),
-                    ],
+                          ],
+                        ),
+                        SizedBox(width: 93),
+                        Icon(Icons.arrow_forward_ios, color: Colors.white),
+                      ],
+                    ),
                   ),
                 ),
               ),
