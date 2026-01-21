@@ -8,6 +8,7 @@ import 'package:vpn/getstared/getstarted.dart';
 import 'package:vpn/home/home.dart';
 
 import 'package:vpn/languagescareen/languagescreen.dart';
+import 'package:vpn/pratice/practice.dart';
 import 'package:vpn/setting/setting.dart';
 
 import 'package:vpn/premium/premium.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Splashscreen(),
+      home: Practice(),
     );
   }
 }

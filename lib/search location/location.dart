@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vpn/home/home.dart';
+import 'package:vpn/premium/premium.dart';
 
 class Location extends StatefulWidget {
   const Location({super.key});
@@ -121,7 +122,15 @@ class _LocationState extends State<Location> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Image.asset("assets/images/crown2.png"),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => Premium()),
+                    );
+                  },
+                  child: Image.asset("assets/images/crown2.png"),
+                ),
               ],
             ),
             const SizedBox(height: 13),

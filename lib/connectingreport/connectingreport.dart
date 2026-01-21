@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vpn/home/home.dart';
 
 class Connectingreport extends StatefulWidget {
   const Connectingreport({super.key});
@@ -32,14 +33,22 @@ class _ConnectingreportState extends State<Connectingreport> {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF1D2031),
-                        borderRadius: BorderRadius.circular(5),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => Home()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1D2031),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        width: 36,
+                        height: 36,
+                        child: Icon(Icons.arrow_back, color: Colors.white),
                       ),
-                      width: 36,
-                      height: 36,
-                      child: Icon(Icons.arrow_back, color: Colors.white),
                     ),
                     SizedBox(width: 18),
                     Text(

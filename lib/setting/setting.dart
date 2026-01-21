@@ -96,7 +96,16 @@ class _SettingState extends State<Setting> {
                     ),
                   ),
                 ),
-                Image.asset('assets/images/crownimage.png'),
+
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => Premium()),
+                    );
+                  },
+                  child: Image.asset('assets/images/crownimage.png'),
+                ),
               ],
             ),
           ),

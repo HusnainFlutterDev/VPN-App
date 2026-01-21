@@ -20,7 +20,7 @@ class _PremiumState extends State<Premium> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            SizedBox(height: 52),
+            SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
@@ -51,7 +51,13 @@ class _PremiumState extends State<Premium> {
                 ],
               ),
             ),
-            Image.asset("assets/images/crown.png", height: 120),
+            Center(
+              child: Image.asset(
+                "assets/images/crown.png",
+                width: 80,
+                height: 80,
+              ),
+            ),
             Text(
               "Get Premium",
               style: GoogleFonts.montserrat(
@@ -61,10 +67,12 @@ class _PremiumState extends State<Premium> {
               ),
             ),
             Text(
-              "Upgrade to Premium to enjoy\n              more features",
+              "Upgrade to Premium to enjoy\nmore features",
+              textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(
                 color: Color(0xffAEB1C2),
                 fontSize: 12,
+
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -223,7 +231,7 @@ class _PremiumState extends State<Premium> {
                         style: GoogleFonts.montserrat(
                           color: Colors.white,
                           fontSize: 16,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
@@ -303,8 +311,8 @@ class extrawidget extends StatelessWidget {
                     text,
                     style: GoogleFonts.montserrat(
                       color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   Container(
@@ -386,8 +394,8 @@ class premiumwidget extends StatelessWidget {
                 text,
                 style: GoogleFonts.montserrat(
                   color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               Container(

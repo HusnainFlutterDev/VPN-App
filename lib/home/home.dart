@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vpn/connectingreport/connectingreport.dart';
+import 'package:vpn/languagescareen/languagescreen.dart';
 import 'package:vpn/premium/premium.dart';
 import 'package:vpn/search%20location/location.dart';
 import 'package:vpn/setting/setting.dart';
@@ -132,7 +133,7 @@ class _HomeState extends State<Home> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => Connectingreport()),
+                    MaterialPageRoute(builder: (_) => Location()),
                   );
                 },
                 child: Container(
